@@ -1,15 +1,15 @@
-Feature: Verify homepage functionalites
+Feature: Verify homePage functionalites
 
     Background:
         Given I am opening a baseURL
 
-    Scenario Outline: verify the HomePage Logo Icon
+    Scenario Outline: Verify Application Logo
         Then I verify the greenKart logo on homePage
 
-    Scenario Outline: verify Navigation Links
-        Then I verify "<navigationLinks>" as navigation link on header
+    Scenario Outline: Verify Application Header
+        Then I verify following link text in Header
+            | Top Deals      |
+            | Flight Booking |
 
-        Examples:
-            | navigationLinks |
-            | Top Deals       |
-            | Flight Booking  |
+    Scenario Outline: Scenario Outline name
+        And I verify the "searchBox" element on HomePage

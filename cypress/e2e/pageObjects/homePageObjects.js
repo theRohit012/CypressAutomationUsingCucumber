@@ -1,4 +1,6 @@
 import { homePageLocators } from "../locators/homePageLocators";
+const { defineConfig } = require("cypress");
+
 class HomePageObjects {
 
     verifyHomePagelogo() {
@@ -10,8 +12,16 @@ class HomePageObjects {
         cy.get(locator).should('be.visible');
     }
 
+    verifyFollowingElementOnHomePage(DataTable) {
+        const elements = DataTable.rawTable.flat();
+        elements.array.forEach(element => {
+            const locator = homePageLocators[elementName];
+            cy.get(locator).should('be.visible');
+        });
+    }
+
     verifyNavigationLinks(linksVisibleText) {
-        cy.contains(linksVisibleText).should('be.visible').should('have.attr', 'href');
+        cy.verifyLinksTextsUsingDataTable(linksVisibleText);
     }
 
 }

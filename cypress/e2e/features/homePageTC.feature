@@ -10,6 +10,3 @@ Feature: Verify homePage functionalites
         Then I verify following link text in Header
             | Top Deals      |
             | Flight Booking |
-
-    Scenario Outline: Scenario Outline name
-        And I verify the "searchBox" element on HomePage

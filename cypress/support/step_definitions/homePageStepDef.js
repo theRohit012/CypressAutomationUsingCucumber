@@ -14,10 +14,6 @@ Then("I verify the {string} element on HomePage", (element) => {
     homePage.verifyElementOnHomePage(element);
 })
 
-Then("I verify the following elements on homePage", (dataTable) => {
-
-})
-
 Then("I verify following link text in Header", (DataTable) => {
     homePage.verifyNavigationLinks(DataTable);
 })
